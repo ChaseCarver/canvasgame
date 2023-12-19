@@ -1,0 +1,14 @@
+making a game! Learning canvas skills.
+started dev log way too far in sorry
+
+12/14 - moving movement into a function
+end - started by taking values on call from wsad, realized i want a recursive funtion, tried making a recursive function, did not figure out how to wait 5 secs...
+
+12/15 - goal 1 - fix bug where square wont move in seperate function 
+SOLUITION : use == instead of =
+goal 2 - fluid animation 
+SOLUTION: Key up event listener
+goal 3 - fix bug where point doesn't get detected or respawned but still gets deleted 
+SOLUTION: move spawnpoint call into offscreen function
+goal 4 - reset on off screen
+SOLUTION: redefine all vars then call offscreen again
