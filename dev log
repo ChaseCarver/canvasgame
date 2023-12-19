@@ -12,3 +12,6 @@ goal 3 - fix bug where point doesn't get detected or respawned but still gets de
 SOLUTION: move spawnpoint call into offscreen function
 goal 4 - reset on off screen
 SOLUTION: redefine all vars then call offscreen again
+12/19 - goal 1 - mobile buttons
+moved points to fixed on top of screen, same with new button elements but on bottom
+tried to set up click events but mouse up and down dont work...

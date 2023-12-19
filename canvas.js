@@ -2,12 +2,26 @@ const canvas = document.getElementById("myCanvas");
 const myCanvas = canvas.getContext("2d");
 let points = 0
 var pointsDisplay = document.getElementById("pointsDisplay")
-canvas.width = 1000
-canvas.height = 500
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
 let playerY = 250
 let playerX = 500
 let velocityY = 0
 let velocityX = 0
+
+
+document.getElementById("left").addEventListener("click", function(a){console.log("mousedown")})
+document.getElementById("left").addEventListener("onmousedown", function(a){console.log("mouseup")})
+
+document.getElementById("right").addEventListener("onclick", function(){console.log("mousedown")})
+document.getElementById("right").addEventListener('onmouseup', function(){console.log("mouseup")})
+
+document.getElementById("up").addEventListener("onclick", function(){console.log("mousedown")})
+document.getElementById("up").addEventListener('onmouseup', function(){console.log("mouseup")})
+
+document.getElementById("down").addEventListener("onclick", function(){console.log("mousedown")})
+document.getElementById("down").addEventListener('onmouseup', function(){console.log("mouseup")})
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
@@ -30,7 +44,7 @@ if(pointPosX <= playerX && pointPosX >= playerX - 75 && pointPosY <= playerY && 
     else{
     myCanvas.fillRect(pointPosX + 10, pointPosY + 10, -10, -10);
     points++
-    pointsDisplay.textContent = `Player score = ${points}`}
+    pointsDisplay.textContent = points}
     return;
 }else{return;}}
 let offscreen = () => {if (playerY > canvas.height || playerY < 75 || playerX> canvas.width || playerX < 75){
@@ -39,7 +53,7 @@ let offscreen = () => {if (playerY > canvas.height || playerY < 75 || playerX> c
     playerY = 250
     playerX = 500
     points = 0
-    pointsDisplay.textContent = `Player score = ${points}`
+    pointsDisplay.textContent = points
     velocityX = 0
     velocityY = 0
     alert("you died!")
@@ -51,10 +65,8 @@ else{
     playerX = playerX + velocityX;
     playerY = playerY + velocityY;
     myCanvas.fillRect(playerX, playerY, -75, -75);
-    console.log("test")
     requestAnimationFrame(offscreen)
     spawnPoint();
-    console.log(window.innerHeight)
 }
 }
 offscreen();
