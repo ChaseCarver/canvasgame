@@ -7,16 +7,15 @@ body{
     overflow: hidden;
 }
 canvas{
-    background-color: antiquewhite;
 }
 div{
-    /* width: 100%;
+    width: 100%;
     display: inline-block;
-    text-align: center; */
+    text-align: center;
 }
 #container{
-    /* position: fixed;
-    bottom: 0; */
+    position: fixed;
+    bottom: 0;
 }
 button{
     width: 10vh;

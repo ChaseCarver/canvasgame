@@ -10,17 +10,17 @@ let velocityY = 0
 let velocityX = 0
 
 
-document.getElementById("left").addEventListener("click", function(a){console.log("mousedown")})
-document.getElementById("left").addEventListener("onmousedown", function(a){console.log("mouseup")})
+document.getElementById("left").addEventListener("mousedown", function(a){velocityX = -5})
+document.getElementById("left").addEventListener("mouseup", function(a){velocityX = 0})
 
-document.getElementById("right").addEventListener("onclick", function(){console.log("mousedown")})
-document.getElementById("right").addEventListener('onmouseup', function(){console.log("mouseup")})
+document.getElementById("right").addEventListener("mousedown", function(){velocityX = 5})
+document.getElementById("right").addEventListener('mouseup', function(){velocityX = 0})
 
-document.getElementById("up").addEventListener("onclick", function(){console.log("mousedown")})
-document.getElementById("up").addEventListener('onmouseup', function(){console.log("mouseup")})
+document.getElementById("up").addEventListener("mousedown", function(){velocityY = -5})
+document.getElementById("up").addEventListener('mouseup', function(){velocityY = 0})
 
-document.getElementById("down").addEventListener("onclick", function(){console.log("mousedown")})
-document.getElementById("down").addEventListener('onmouseup', function(){console.log("mouseup")})
+document.getElementById("down").addEventListener("mousedown", function(){velocityY = 5})
+document.getElementById("down").addEventListener('mouseup', function(){velocityY = 0})
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
