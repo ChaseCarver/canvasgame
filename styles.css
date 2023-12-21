@@ -1,9 +1,6 @@
 *{
     padding: 0;
     margin: 0;
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
 }
 body{
     background-color: #e0e0e0;
@@ -29,4 +26,9 @@ button{
     position: fixed;
     top: 0;
     text-align: center;
+}
+.disableSelect{
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
