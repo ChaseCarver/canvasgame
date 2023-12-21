@@ -90,8 +90,8 @@ document.addEventListener("keyup", (event) => {
         velocityX = 0
     }
 });
-document.getElementById("left").addEventListener("mousedown", function(){velocityX = -5})
-document.getElementById("right").addEventListener("mousedown", function(){velocityX = 5})
-document.getElementById("up").addEventListener("mousedown", function(){velocityY = -5})
-document.getElementById("down").addEventListener("mousedown", function(){velocityY = 5})
-document.addEventListener("mouseup", function(){velocityX = 0, velocityY= 0})
+document.getElementById("left").addEventListener("touchstart", function(){velocityX = -5})
+document.getElementById("right").addEventListener("touchstart", function(){velocityX = 5})
+document.getElementById("up").addEventListener("touchstart", function(){velocityY = -5})
+document.getElementById("down").addEventListener("touchstart", function(){velocityY = 5})
+document.addEventListener("touchend", function(){velocityX = 0, velocityY= 0})
